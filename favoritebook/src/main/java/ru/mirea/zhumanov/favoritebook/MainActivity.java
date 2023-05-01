@@ -15,8 +15,8 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private ActivityResultLauncher<Intent> activityResultLauncher;
-    static final String KEY = "book_name";
-    static final String USER_MESSAGE="MESSAGE";
+    static final String BOOK = "";
+    static final String USER_MESSAGE="";
     private TextView textViewUserBook;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void getInfoAboutBook(View view) {
         Intent intent = new Intent(this, ShareActivity.class);
-        intent.putExtra(KEY, "Пикник у обочины");
+        intent.putExtra(BOOK, "Пикник у обочины");
         activityResultLauncher.launch(intent);
     }
 }
