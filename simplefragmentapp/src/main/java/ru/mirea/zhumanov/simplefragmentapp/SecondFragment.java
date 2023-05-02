@@ -12,8 +12,8 @@ import android.view.ViewGroup;
 public class SecondFragment extends Fragment {
 
 
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    private static final String PARAM1 = "param1";
+    private static final String PARAM2 = "param2";
 
 
     private String mParam1;
@@ -27,8 +27,8 @@ public class SecondFragment extends Fragment {
     public static SecondFragment newInstance(String param1, String param2) {
         SecondFragment fragment = new SecondFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
+        args.putString(PARAM1, param1);
+        args.putString(PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
     }
@@ -37,8 +37,8 @@ public class SecondFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+            mParam1 = getArguments().getString(PARAM1);
+            mParam2 = getArguments().getString(PARAM2);
         }
     }
 
